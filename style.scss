@@ -1,0 +1,157 @@
+@import 'variable';
+@import 'mixins';
+
+* {
+    font-family: 'PT Sans Caption', sans-serif, 'arial', 'Times New Roman';
+}
+img {
+    margin-top: 12px;
+    margin-left: 40px;
+}
+body {
+    margin: 0px;
+}
+.header {
+    height: 60px;
+    border-bottom: 1px solid $mainColor2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $mainColor3;
+    background-color: $mainColor1;
+    position: relative;
+    z-index: 1;
+    margin-top: 0px;
+}
+p {
+    text-align: center;
+}
+.Border {
+    width: 500px;
+    border: 1px solid $mainColor4;    
+    padding: 1px;
+    box-shadow: 2px 2px 19px $mainColor4;
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px 15px;
+    background: #fff;
+    border-radius: 15px;
+    h2 {
+        font-size: 25px;
+        color: #5EA8DE;
+        text-align: center;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-family: inherit;
+        margin-top: 10px;
+    }
+    form {
+        color: black;
+        font-family: 'PT Sans Caption', sans-serif, 'arial', 'Times New Roman';
+        #account {
+            @include formbox();
+            margin-top: 25px;
+        #password {
+            @include formbox();
+            margin-top: 25px;
+    }
+}
+.submitLogin{
+    width: 50%;
+    background-color: $mainColor1;
+    color: $mainColor2 !important;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline;
+    border: 1px solid $mainColor2;
+    height: 38px;
+    margin-top: 18px;
+}
+div.footer {
+    color: $mainColor4; 
+    border-top: 1px solid $mainColor2;
+}
+#QuenMatKhau {
+    float: left;
+    display: inline;
+    margin-top: 25px;
+}
+.form-text {
+    text-decoration: none;
+    color: #008bef;
+    width: 50%;
+    text-align: left;
+    font-size: 1rem;
+}
+.social a {
+    width: 63px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $mainColor2;
+    display: inline-block;
+    margin: 4px;
+}
+
+.social {
+    .f {
+        background: url(https://id.gosu.vn/themes/temp2018/images/icon-face.png) no-repeat center;
+    }
+    .g {
+        background: url(https://id.gosu.vn/themes/temp2018/images/icon-google.png) no-repeat center;
+    }   
+    .d {
+        background: url(https://id.gosu.vn/themes/temp2018/images/icon-duo.png) no-repeat center;
+    }
+    .qr {
+        background: url(https://id.gosu.vn/themes/temp2018/images/icon-rqcode.png) no-repeat center;
+    }
+
+}
+@media only screen and (max-width: 979px) {
+.container {
+    width: unset;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+}
+.Border {
+    border: none; 
+    box-shadow: none;
+}
+.header .logo {
+    text-align: center;
+    float: unset;
+}
+img {
+    margin-left: unset;
+}
+}
+@media only screen and (max-width: 480px) {
+.Border {
+    width: 100%;
+    padding: 20px 0px;
+    margin: 15px auto;
+}
+}
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: right;
+}
+li a {
+    display:block;
+    color:#008bef;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: white;
+    color:#008bef
+}

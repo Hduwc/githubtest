@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GOSU - Trang chủ</title>
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link rel="stylesheet" href="./style.css">
+<script src="/themes/temp2018/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#submitLogin").click(function () {
+            if($('.input_Password').val() != "")
+            {
+             $('.input_Password').val(MD5($('.input_Password').val()));
+            }
+        });           
+    });
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+<div class="header">
+    <div class="menu-left" id="menu-pc">
+        <div class="container">
+            <div class="logo">
+                <a onclick="openNav()"><img src="https://id.gosu.vn/themes/temp2018/images/logo.png" alt="logo"></a>
+            </div>
+        </div>
+        <div id="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('#toggle').click(function(){
+                    $('navv').slideToggle();
+                })
+            })
+        </script>
+        <nav>
+            <ul class="menu-left-ul" id="menu-left">
+                <li class="menu-left-li menu-left-li--seperate"><a href="/">Trang chủ </a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a href="/Account/">Thông tin đăng nhập</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a href="/Account/Info">Thông tin cá nhân</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a href="/Account/Safe">Thông tin Bảo mật</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a href="/Account/DeviceActivity">Hoạt động tài khoản</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="https://pay.gosu.vn/Payment/Prepay">Nạp GOSU</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="https://pay.gosu.vn/Payment/PreTransfer">Nạp game</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="https://pay.gosu.vn/Card">Mua thẻ cào</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="https://pay.gosu.vn/Card/Topup">Nạp tiền điện thoại</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="/News">Tin tức</a></li>
+                <li class="menu-left-li menu-left-li--seperate"><a target="_blank" href="/News?type=2">Hướng dẫn</a></li>
+                <li class="menu-left-li"><a target="_blank" href="http://hotro.gosu.vn">Hỗ trợ</a></li>           
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="clr"></div>
+<div class="Border col-sm-4">
+<h2>Đăng Nhập</h2>
+<form class="container">
+    <input class="form-box" type="text" id="account" name="account" value placeholder="Tài Khoản">
+    <input class="form-box" type="password" id="password" name="password" value placeholder="Mật Khẩu">
+    <div>
+    <a class="form-text" id="QuenMatKhau" href="/Account/LostPassword">Quên mật khẩu?</a>
+    <input class="submitLogin udpw" type="submit" value="Đăng Nhập">
+    </div>
+</form>
+  <br><br>
+  <p> Chưa có tài khoản? 
+    <a class="form-text" href="/Account/Register">Đăng ký!</a>
+  </p>
+  <p> Hoặc đăng nhập bằng </p>
+  <div class="social">			
+    <a class="f" href="javascript:void(0)" onclick="openpopup('/Account/Authorization?partner=facebook')" title="Đăng nhập Facebook"></a>
+    <a class="g" href="javascript:void(0)" onclick="openpopup('/Account/Authorization?partner=google')" title="Đăng nhập Google"></a>			    
+    <a class="d" href="javascript:void(0)" onclick="openpopup('/Account/DuoAuthorization')" title="Đăng nhập Duo"></a>     
+    <a class="qr" onclick="tab($(this),'https://id.gosu.vn/');return false;" href="#loginQr"></a>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="footer">
+    <p>Công ty cổ phần trực tuyến GOSU</p>
+    <p>Địa chỉ: Tầng 3, Tòa nhà HH2 - Bắc Hà, Số 15 Tố Hữu, Phường Nhân Chính, Quận Thanh Xuân, TP. Hà Nội</p>
+<p>Điện thoại: (+84) 24 6686 0058</p>
+<p>Người chịu trách nhiệm nội dung: Trần Trọng Kiên</p>
+<p>Hotline: CSKH 1900 7189</p>
+<p>Email hỗ trợ: cskh@gosu.vn</p>
+   <p>Copyright @ GOSU</p>
+   <p><a href="/News/Details/17">Điều khoản</a>  |  <a href="/News?Type=2">Hướng dẫn</a>  |  <a target="_blank" href="http://hotro.gosu.vn/">Hỗ trợ</a>  | <a target="_blank" href="http://hotro.gosu.vn/gop-y.html">Hỏi đáp</a></p>
+ </div>
+
+
+</body>
+</html>
