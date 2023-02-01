@@ -1,7 +1,51 @@
+
+.header{
+  background: #0070C0;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+ul{
+  list-style-type: none;
+}
+#menu-left{
+  display: flex;
+}
+#menu-left li a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px;
+}
+#menu-left li:hover a{
+  background: #273c75;
+  transition: all 0.3s
+}
+#toggle{
+  display: none;
+  background: #0070c0;
+  color: #fff;
+  text-align: right;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){
+  #menu-left{
+    flex-direction: column;
+    text-align: center;
+  }
+  #toggle{
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
 * {
   font-family: "PT Sans Caption", sans-serif, "arial", "Times New Roman";
 }
-
 img {
   margin-top: 12px;
   margin-left: 40px;
@@ -9,18 +53,6 @@ img {
 
 body {
   margin: 0px;
-}
-
-.header {
-  height: 60px;
-  border-bottom: 1px solid #d9d9d9;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(217, 217, 217);
-  background-color: #0070C0;
-  position: relative;
-  z-index: 1;
-  margin-top: 0px;
 }
 
 p {
@@ -56,7 +88,7 @@ p {
 .submitLogin {
   width: 50%;
   background-color: #0070C0;
-  color: #d9d9d9 !important;
+  color: #faf2f2 !important;
   text-transform: uppercase;
   text-align: center;
   display: inline;
@@ -100,7 +132,7 @@ p {
   font-size: 16px;
   margin-top: 25px;
 }
-div.footer {
+.footer {
   color: #aaa;
   border-top: 1px solid #d9d9d9;
 }
@@ -141,100 +173,3 @@ div.footer {
 .social .qr {
   background: url(https://id.gosu.vn/themes/temp2018/images/icon-rqcode.png) no-repeat center;
 }
-
-@media only screen and (max-width: 979px) {
-  .container {
-    width: unset;
-    padding-right: 15px;
-    padding-left: 15px;
-    display: block;
-  }
-  .Border {
-    border: none;
-    box-shadow: none;
-  }
-  .header .logo {
-    text-align: center;
-    float: unset;
-  }
-  img {
-    margin-left: unset;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .Border {
-    width: 100%;
-    padding: 20px 0px;
-    margin: 15px auto;
-  }
-}
-@media (min-width: 576px) {
-  .col-sm-3 {
-    flex: 0 0 auto;
-    width: 500px;
-  }
-}/*# sourceMappingURL=style.css.map */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0070C0;
-  position:absolute;
-}
-li {
-  float: left;
-}
-li:last-child {
-  border-right: none;
-}
-li a {
-  display:block;
-  color:#fff;
-  text-align: center;
-  padding: 8px 15px;
-  text-decoration: none;
-}
-li a:hover {
-  background-color:#fff;
-  color:#0070C0;
-  transition: all 0.3s;
-}
-#menu-left-ul {
-  display: flex;
-}
-#toggle {
-  display: none;
-  background-color:#0070C0;
-  color: #fff;
-  text-align: right;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  .menu-left {
-    flex-direction: column;
-    text-align: center;
-  }
-  #toggle {
-    display: block;
-  }
-  #menu-left {
-    display: none;
-  }
-}
-.menu-left-li {
-  position: relative;
-}
-.menu-left-li--seperate::after {
-  content: "";
-  display: block;  
-  position: absolute;
-  height: 12px;
-  border-right: 1px solid #fff;
-  right: 0px;
-  top:  50%;
-  transform: translateY(-50%);
-}
-
