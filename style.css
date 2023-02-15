@@ -31,18 +31,6 @@ ul{
   font-size: 20px;
   cursor: pointer;
 }
-@media screen and (max-width: 768px){
-  #menu-left{
-    flex-direction: column;
-    text-align: center;
-  }
-  #toggle{
-    display: block;
-  }
-  nav {
-    display: none;
-  }
-}
 * {
   font-family: "PT Sans Caption", sans-serif, "arial", "Times New Roman";
 }
@@ -173,3 +161,44 @@ p {
 .social .qr {
   background: url(https://id.gosu.vn/themes/temp2018/images/icon-rqcode.png) no-repeat center;
 }
+@media screen and (max-width: 768px){
+  #menu-left{
+    flex-direction: column;
+    text-align: center;
+  }
+  #toggle{
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 979px) {
+  .container {
+    width: unset;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+  }
+  .Border {
+    border: none;
+    box-shadow: none;
+  }
+  .header .logo {
+    text-align: center;
+    float: unset;
+  }
+  img {
+    margin-left: unset;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .Border {
+    width: 100%;
+    padding: 20px 0px;
+    margin: 15px auto;
+  }
+}
+
+
+
